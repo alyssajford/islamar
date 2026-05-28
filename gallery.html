@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Gallery — Villa Islamar</title>
+  <meta name="description" content="Browse all photos of Villa Islamar — balconies, pool, sunsets, bedrooms, kitchen, and more. Luxury 3-bedroom villa in Guanacaste, Costa Rica." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- TOP NAVIGATION -->
+  <header class="topnav topnav--scrolled" id="topnav">
+    <div class="topnav-inner">
+      <div class="topnav-logo">
+        <a href="index.html">Villa <em>Islamar</em></a>
+      </div>
+      <nav class="topnav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="rates.html">Rates</a>
+        <a href="location.html">Location</a>
+      </nav>
+      <a href="book.html" class="topnav-book">Book Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <main class="main-content">
+
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-eyebrow">See for Yourself</span>
+          <h2 class="section-title">Photo Gallery</h2>
+          <p class="section-intro" style="color:rgba(255,255,255,0.65)">Browse all 26 photos organized by space and experience.</p>
+        </div>
+      </div>
+
+      <!-- THE PROPERTY -->
+      <div class="gallery-section-heading" data-aos="fade-up">
+        <span class="cat-eyebrow">Category 1 of 5</span>
+        <h3>The Property</h3>
+      </div>
+      <div class="gallery-grid">
+        <a href="pics/house_front.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Villa Islamar — Front Exterior">
+          <img src="pics/house_front.jpg" alt="Villa Islamar Front Exterior" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Villa Islamar — Front Exterior</div>
+        </a>
+        <a href="pics/villas_catalinas_sign.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Villas Catalinas Community">
+          <img src="pics/villas_catalinas_sign.jpg" alt="Villas Catalinas Community" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Villas Catalinas Community</div>
+        </a>
+      </div>
+
+      <!-- VIEWS & BALCONIES -->
+      <div class="gallery-section-heading" data-aos="fade-up">
+        <span class="cat-eyebrow">Category 2 of 5</span>
+        <h3>Views &amp; Balconies</h3>
+      </div>
+      <div class="gallery-grid">
+        <a href="pics/balcony_view.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Balcony Ocean View">
+          <img src="pics/balcony_view.jpg" alt="Balcony Ocean View" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Balcony Ocean View</div>
+        </a>
+        <a href="pics/balcony.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Balcony">
+          <img src="pics/balcony.jpg" alt="Balcony" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Balcony</div>
+        </a>
+        <a href="pics/balcony_day.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Balcony — Daytime">
+          <img src="pics/balcony_day.jpg" alt="Balcony Daytime" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Balcony — Daytime</div>
+        </a>
+        <a href="pics/balcony_seats.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Balcony Seating">
+          <img src="pics/balcony_seats.jpg" alt="Balcony Seating" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Balcony Seating</div>
+        </a>
+        <a href="pics/balcony_seats_2.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Balcony Dining Area">
+          <img src="pics/balcony_seats_2.jpg" alt="Balcony Dining Area" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Balcony Dining Area</div>
+        </a>
+        <a href="pics/night_balcony.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Balcony at Night">
+          <img src="pics/night_balcony.jpg" alt="Balcony at Night" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Balcony at Night</div>
+        </a>
+        <a href="pics/bird_balcony.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Wildlife at the Villa">
+          <img src="pics/bird_balcony.jpg" alt="Wildlife at the Villa" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Wildlife at the Villa</div>
+        </a>
+      </div>
+
+      <!-- POOL & SUNSETS -->
+      <div class="gallery-section-heading" data-aos="fade-up">
+        <span class="cat-eyebrow">Category 3 of 5</span>
+        <h3>Pool &amp; Sunsets</h3>
+      </div>
+      <div class="gallery-grid">
+        <a href="pics/pool.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Infinity Pool">
+          <img src="pics/pool.jpg" alt="Infinity Pool" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Infinity Pool</div>
+        </a>
+        <a href="pics/rainbow_pool.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Pool with Rainbow">
+          <img src="pics/rainbow_pool.jpg" alt="Pool with Rainbow" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Pool with Rainbow</div>
+        </a>
+        <a href="pics/beach_sunset.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Beach Sunset">
+          <img src="pics/beach_sunset.jpg" alt="Beach Sunset" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Beach Sunset</div>
+        </a>
+        <a href="pics/night_sunset.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Evening Sunset">
+          <img src="pics/night_sunset.jpg" alt="Evening Sunset" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Evening Sunset</div>
+        </a>
+      </div>
+
+      <!-- KITCHEN & LIVING -->
+      <div class="gallery-section-heading" data-aos="fade-up">
+        <span class="cat-eyebrow">Category 4 of 5</span>
+        <h3>Kitchen &amp; Living</h3>
+      </div>
+      <div class="gallery-grid">
+        <a href="pics/kitchen.png" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Kitchen">
+          <img src="pics/kitchen.png" alt="Kitchen" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Kitchen</div>
+        </a>
+        <a href="pics/kitchen_2.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Kitchen — Full View">
+          <img src="pics/kitchen_2.jpg" alt="Kitchen Full View" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Kitchen — Full View</div>
+        </a>
+        <a href="pics/living_area.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Living Area">
+          <img src="pics/living_area.jpg" alt="Living Area" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Living Area</div>
+        </a>
+        <a href="pics/main_area.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Open-Plan Living">
+          <img src="pics/main_area.jpg" alt="Open-Plan Living" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Open-Plan Living</div>
+        </a>
+        <a href="pics/main_area_2.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Main Living Space">
+          <img src="pics/main_area_2.jpg" alt="Main Living Space" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Main Living Space</div>
+        </a>
+        <a href="pics/couch.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Living Room">
+          <img src="pics/couch.jpg" alt="Living Room" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Living Room</div>
+        </a>
+      </div>
+
+      <!-- BEDROOMS & BATHS -->
+      <div class="gallery-section-heading" data-aos="fade-up">
+        <span class="cat-eyebrow">Category 5 of 5</span>
+        <h3>Bedrooms &amp; Baths</h3>
+      </div>
+      <div class="gallery-grid">
+        <a href="pics/master_bedroom.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Master Bedroom">
+          <img src="pics/master_bedroom.jpg" alt="Master Bedroom" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Master Bedroom</div>
+        </a>
+        <a href="pics/guest_bed_1.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Guest Bedroom">
+          <img src="pics/guest_bed_1.jpg" alt="Guest Bedroom" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Guest Bedroom</div>
+        </a>
+        <a href="pics/guest_bed2.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Guest Bedroom">
+          <img src="pics/guest_bed2.jpg" alt="Guest Bedroom" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Guest Bedroom</div>
+        </a>
+        <a href="pics/guest_bed22.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Guest Bedroom — Detail">
+          <img src="pics/guest_bed22.jpg" alt="Guest Bedroom Detail" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Guest Bedroom — Detail</div>
+        </a>
+        <a href="pics/master_bath_pic1.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Master Bathroom">
+          <img src="pics/master_bath_pic1.jpg" alt="Master Bathroom" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Master Bathroom</div>
+        </a>
+        <a href="pics/master_bath_pic2.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Master Bathroom — Soaking Tub">
+          <img src="pics/master_bath_pic2.jpg" alt="Master Bathroom Soaking Tub" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Master Bathroom — Soaking Tub</div>
+        </a>
+        <a href="pics/bathroom_1.jpg" class="glightbox gallery-item" data-gallery="villa" data-glightbox="title: Guest Bathroom">
+          <img src="pics/bathroom_1.jpg" alt="Guest Bathroom" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          <div class="gallery-caption">Guest Bathroom</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="section booking" id="booking">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-eyebrow">No Middleman. No Extra Fees.</span>
+          <h2 class="section-title">Book Direct</h2>
+          <p class="section-intro">Select your dates and send us a request. We'll confirm availability and be in touch within 24 hours.</p>
+        </div>
+        <div class="booking-layout">
+          <div class="booking-calendar-wrap" data-aos="fade-right">
+            <div id="calendar-inline"></div>
+            <div class="booking-legend">
+              <span class="legend-item"><span class="dot dot--available"></span> Available</span>
+              <span class="legend-item"><span class="dot dot--booked"></span> Unavailable</span>
+            </div>
+          </div>
+          <div class="booking-form-wrap" data-aos="fade-left">
+            <form id="bookingForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="checkin">Check-in Date</label>
+                  <input type="text" id="checkin" name="checkin" placeholder="Select on calendar" readonly required />
+                </div>
+                <div class="form-group">
+                  <label for="checkout">Check-out Date</label>
+                  <input type="text" id="checkout" name="checkout" placeholder="Select on calendar" readonly required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="guestName">Full Name *</label>
+                  <input type="text" id="guestName" name="guestName" placeholder="Jane Smith" autocomplete="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="guests">Number of Guests *</label>
+                  <select id="guests" name="guests" required>
+                    <option value="">Select…</option>
+                    <option>1</option><option>2</option><option>3</option><option>4</option>
+                    <option>5</option><option>6</option><option>7</option><option>8</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="guestEmail">Email Address *</label>
+                  <input type="email" id="guestEmail" name="guestEmail" placeholder="jane@example.com" autocomplete="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="guestPhone">Phone Number</label>
+                  <input type="tel" id="guestPhone" name="guestPhone" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+                </div>
+              </div>
+              <div style="display:none" aria-hidden="true">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+              </div>
+              <div class="form-group form-group--full">
+                <label for="message">Message (optional)</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your trip — special occasions, questions, or requests…"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn--full" id="submitBtn">
+                <span class="btn-text">Send Booking Request</span>
+                <span class="btn-loading" hidden><i class="fa-solid fa-spinner fa-spin"></i>&nbsp; Sending…</span>
+              </button>
+              <p class="form-privacy"><i class="fa-solid fa-lock"></i> Your information is private and never shared.</p>
+            </form>
+            <div id="formSuccess" class="form-success" hidden>
+              <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <h3>Request Sent!</h3>
+              <p>Thank you! We'll review your dates and get back to you within <strong>24 hours</strong> to confirm.</p>
+              <button type="button" class="btn btn-outline" onclick="document.getElementById('formSuccess').hidden=true;document.getElementById('bookingForm').hidden=false;">Send Another Request</button>
+            </div>
+            <div id="formError" class="form-error" hidden>
+              <p><i class="fa-solid fa-triangle-exclamation"></i> Something went wrong. Please email us at <a href="mailto:laurieford10@yahoo.com">laurieford10@yahoo.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">Villa <em>Islamar</em></a>
+            <p>Your ocean paradise in Guanacaste, Costa Rica.<br />3 bedrooms · 3 baths · Ocean views · Walk to the beach.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="rates.html">Rates</a></li>
+              <li><a href="location.html">Location</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p><i class="fa-solid fa-envelope"></i>&nbsp;<a href="mailto:laurieford10@yahoo.com">laurieford10@yahoo.com</a></p>
+            <p class="footer-tagline">Skip the booking fees — reserve directly with us!</p>
+            <a href="book.html" class="btn btn-primary btn--sm">Book Now</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Villa Islamar &nbsp;·&nbsp; Villas Catalinas, Guanacaste, Costa Rica &nbsp;·&nbsp; All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox@3/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="data/availability.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+# Villa Islamar — Netlify Build Config
+
+[build]
+  publish   = "."
+  functions = "netlify/functions"
+
+# Security headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options            = "SAMEORIGIN"
+    X-Content-Type-Options     = "nosniff"
+    Referrer-Policy            = "strict-origin-when-cross-origin"
+    X-XSS-Protection           = "1; mode=block"
+    Permissions-Policy         = "camera=(), microphone=(), geolocation=()"
+
+# Long-term cache for images (they don't change)
+[[headers]]
+  for = "/pics/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

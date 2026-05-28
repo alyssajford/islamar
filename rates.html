@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rates & Booking — Villa Islamar</title>
+  <meta name="description" content="Villa Islamar nightly rates from $200. Book direct — no middleman, no extra fees. 3-bedroom luxury villa in Guanacaste, Costa Rica." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Flatpickr -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- TOP NAVIGATION -->
+  <header class="topnav topnav--scrolled" id="topnav">
+    <div class="topnav-inner">
+      <div class="topnav-logo">
+        <a href="index.html">Villa <em>Islamar</em></a>
+      </div>
+      <nav class="topnav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="rates.html" class="active">Rates</a>
+        <a href="location.html">Location</a>
+      </nav>
+      <a href="book.html" class="topnav-book">Book Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- RATES -->
+    <section class="section rates" id="rates">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-eyebrow">Affordable Luxury</span>
+          <h2 class="section-title">Nightly Rates</h2>
+          <p class="section-intro">All rates are per night. 3-night minimum stay. Cleaning fee applies.</p>
+        </div>
+        <div class="rates-grid">
+          <div class="rate-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="rate-season">Low Season</div>
+            <div class="rate-dates">May 1 – November 30</div>
+            <div class="rate-price">
+              <span class="rate-from">From</span>
+              <span class="rate-amount">$200</span>
+              <span class="rate-unit">/night</span>
+            </div>
+            <ul class="rate-features">
+              <li><i class="fa-solid fa-check"></i> Green season — lush &amp; vibrant</li>
+              <li><i class="fa-solid fa-check"></i> Quieter, more private beaches</li>
+              <li><i class="fa-solid fa-check"></i> Great for longer stays</li>
+            </ul>
+            <a href="#booking" class="btn btn-outline">Check Dates</a>
+          </div>
+          <div class="rate-card rate-card--featured" data-aos="fade-up" data-aos-delay="120">
+            <div class="rate-badge">Most Popular</div>
+            <div class="rate-season">High Season</div>
+            <div class="rate-dates">December 1 – April 30</div>
+            <div class="rate-price">
+              <span class="rate-from">From</span>
+              <span class="rate-amount">$275</span>
+              <span class="rate-unit">/night</span>
+            </div>
+            <ul class="rate-features">
+              <li><i class="fa-solid fa-check"></i> Dry season sunshine daily</li>
+              <li><i class="fa-solid fa-check"></i> Perfect beach weather</li>
+              <li><i class="fa-solid fa-check"></i> Ideal for families &amp; groups</li>
+            </ul>
+            <a href="#booking" class="btn btn-primary">Check Dates</a>
+          </div>
+          <div class="rate-card" data-aos="fade-up" data-aos-delay="190">
+            <div class="rate-season">Peak Holidays</div>
+            <div class="rate-dates">Christmas · New Year · Easter</div>
+            <div class="rate-price">
+              <span class="rate-from">From</span>
+              <span class="rate-amount">$350</span>
+              <span class="rate-unit">/night</span>
+            </div>
+            <ul class="rate-features">
+              <li><i class="fa-solid fa-check"></i> Celebrate in paradise</li>
+              <li><i class="fa-solid fa-check"></i> Book well in advance</li>
+              <li><i class="fa-solid fa-check"></i> Unforgettable memories await</li>
+            </ul>
+            <a href="#booking" class="btn btn-outline">Check Dates</a>
+          </div>
+        </div>
+        <p class="rates-note" data-aos="fade-up">* Rates are subject to change. Contact us for extended-stay discounts or special occasion pricing.</p>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="section booking" id="booking">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-eyebrow">No Middleman. No Extra Fees.</span>
+          <h2 class="section-title">Book Direct</h2>
+          <p class="section-intro">Select your dates and send us a request. We'll confirm availability and be in touch within 24 hours.</p>
+        </div>
+        <div class="booking-layout">
+          <div class="booking-calendar-wrap" data-aos="fade-right">
+            <div id="calendar-inline"></div>
+            <div class="booking-legend">
+              <span class="legend-item"><span class="dot dot--available"></span> Available</span>
+              <span class="legend-item"><span class="dot dot--booked"></span> Unavailable</span>
+            </div>
+          </div>
+          <div class="booking-form-wrap" data-aos="fade-left">
+            <form id="bookingForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="checkin">Check-in Date</label>
+                  <input type="text" id="checkin" name="checkin" placeholder="Select on calendar" readonly required />
+                </div>
+                <div class="form-group">
+                  <label for="checkout">Check-out Date</label>
+                  <input type="text" id="checkout" name="checkout" placeholder="Select on calendar" readonly required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="guestName">Full Name *</label>
+                  <input type="text" id="guestName" name="guestName" placeholder="Jane Smith" autocomplete="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="guests">Number of Guests *</label>
+                  <select id="guests" name="guests" required>
+                    <option value="">Select…</option>
+                    <option>1</option><option>2</option><option>3</option><option>4</option>
+                    <option>5</option><option>6</option><option>7</option><option>8</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="guestEmail">Email Address *</label>
+                  <input type="email" id="guestEmail" name="guestEmail" placeholder="jane@example.com" autocomplete="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="guestPhone">Phone Number</label>
+                  <input type="tel" id="guestPhone" name="guestPhone" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+                </div>
+              </div>
+              <div style="display:none" aria-hidden="true">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+              </div>
+              <div class="form-group form-group--full">
+                <label for="message">Message (optional)</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your trip — any special occasions, questions, or requests…"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn--full" id="submitBtn">
+                <span class="btn-text">Send Booking Request</span>
+                <span class="btn-loading" hidden><i class="fa-solid fa-spinner fa-spin"></i>&nbsp; Sending…</span>
+              </button>
+              <p class="form-privacy"><i class="fa-solid fa-lock"></i> Your information is private and never shared.</p>
+            </form>
+            <div id="formSuccess" class="form-success" hidden>
+              <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <h3>Request Sent!</h3>
+              <p>Thank you, we received your booking request! We'll review your dates and get back to you within <strong>24 hours</strong> to confirm.</p>
+              <button type="button" class="btn btn-outline" onclick="document.getElementById('formSuccess').hidden=true; document.getElementById('bookingForm').hidden=false;">Send Another Request</button>
+            </div>
+            <div id="formError" class="form-error" hidden>
+              <p><i class="fa-solid fa-triangle-exclamation"></i> Something went wrong. Please email us directly at <a href="mailto:laurieford10@yahoo.com">laurieford10@yahoo.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">Villa <em>Islamar</em></a>
+            <p>Your ocean paradise in Guanacaste, Costa Rica.<br />3 bedrooms · 3 baths · Ocean views · Walk to the beach.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="rates.html">Rates</a></li>
+              <li><a href="location.html">Location</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p><i class="fa-solid fa-envelope"></i>&nbsp;<a href="mailto:laurieford10@yahoo.com">laurieford10@yahoo.com</a></p>
+            <p class="footer-tagline">Skip the booking fees — reserve directly with us!</p>
+            <a href="book.html" class="btn btn-primary btn--sm">Book Now</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Villa Islamar &nbsp;·&nbsp; Villas Catalinas, Guanacaste, Costa Rica &nbsp;·&nbsp; All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="data/availability.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/calendar.js"></script>
+</body>
+</html>
