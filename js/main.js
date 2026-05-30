@@ -116,4 +116,77 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(s => s.classList.add('in-view'));
   }
 
+  // ----------------------------------------------------------
+  // Reviews — load from localStorage + handle form submit
+  // ----------------------------------------------------------
+  const reviewsList = document.getElementById('reviewsList');
+  const reviewForm = document.getElementById('reviewForm');
+
+  function getStoredReviews() {
+    try { return JSON.parse(localStorage.getItem('islamar_reviews') || '[]'); }
+    catch { return []; }
+  }
+
+  function saveReviews(reviews) {
+    localStorage.setItem('islamar_reviews', JSON.stringify(reviews));
+  }
+
+  function renderStoredReviews() {
+    if (!reviewsList) return;
+    const reviews = getStoredReviews();
+    reviews.forEach(r => {
+      const stars = '★'.repeat(parseInt(r.rating)) + '☆'.repeat(5 - parseInt(r.rating));
+      const initials = r.name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2);
+      const card = document.createElement('div');
+      card.className = 'review-card';
+      card.innerHTML = `
+        <div class="review-stars">${stars}</div>
+        <p class="review-text">"${r.text}"</p>
+        <div class="review-author">
+          <div class="review-avatar">${initials}</div>
+          <div class="review-meta">
+            <span class="review-name">${r.name}</span>
+            <span class="review-source">Guest · ${r.date || '2025'}</span>
+          </div>
+        </div>`;
+      reviewsList.appendChild(card);
+    });
+  }
+
+  renderStoredReviews();
+
+  if (reviewForm) {
+    reviewForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('reviewName').value.trim();
+      const rating = document.getElementById('reviewRating').value;
+      const text = document.getElementById('reviewText').value.trim();
+      if (!name || !rating || !text) return;
+
+      const reviews = getStoredReviews();
+      reviews.push({ name, rating, text, date: new Date().getFullYear().toString() });
+      saveReviews(reviews);
+
+      reviewForm.hidden = true;
+      document.getElementById('reviewSuccess').hidden = false;
+
+      // Render the new review immediately
+      const stars = '★'.repeat(parseInt(rating)) + '☆'.repeat(5 - parseInt(rating));
+      const initials = name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2);
+      const card = document.createElement('div');
+      card.className = 'review-card';
+      card.innerHTML = `
+        <div class="review-stars">${stars}</div>
+        <p class="review-text">"${text}"</p>
+        <div class="review-author">
+          <div class="review-avatar">${initials}</div>
+          <div class="review-meta">
+            <span class="review-name">${name}</span>
+            <span class="review-source">Guest · ${new Date().getFullYear()}</span>
+          </div>
+        </div>`;
+      if (reviewsList) reviewsList.appendChild(card);
+    });
+  }
+
 });

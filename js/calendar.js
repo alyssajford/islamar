@@ -29,9 +29,9 @@
 //  5. Replace the three placeholder strings below:
 // -------------------------------------------------------------
 
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // ← paste here
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // ← paste here
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // ← paste here
+const EMAILJS_PUBLIC_KEY  = 'YzVU1EgdxMKgtfHs0';
+const EMAILJS_SERVICE_ID  = 'service_6bnzm2o';
+const EMAILJS_TEMPLATE_ID = 'template_efrhm5e';
 
 // -------------------------------------------------------------
 

@@ -101,6 +101,61 @@
       </div>
     </section>
 
+    <!-- REVIEWS -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-eyebrow">What Our Guests Say</span>
+          <h2 class="section-title">Guest Reviews</h2>
+        </div>
+        <div class="reviews-grid" id="reviewsList">
+          <div class="review-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"We absolutely loved staying here! We went with family and it was the perfect getaway, super relaxing and it was nice to be in paradise for a week! There was so much to do and so many cool animals which I loved."</p>
+            <div class="review-author">
+              <div class="review-avatar">AJ</div>
+              <div class="review-meta">
+                <span class="review-name">Alyssa J.</span>
+                <span class="review-source">Guest · 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leave a Review Form -->
+        <div class="review-form-wrap" data-aos="fade-up">
+          <h3 class="review-form-title">Leave a Review</h3>
+          <p class="review-form-subtitle">Stayed at Villa Islamar? We'd love to hear about your experience.</p>
+          <form id="reviewForm" class="review-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="reviewName">Your Name *</label>
+                <input type="text" id="reviewName" name="reviewName" placeholder="Jane S." required />
+              </div>
+              <div class="form-group">
+                <label for="reviewRating">Rating *</label>
+                <select id="reviewRating" name="reviewRating" required>
+                  <option value="">Select…</option>
+                  <option value="5">★★★★★ — Amazing</option>
+                  <option value="4">★★★★ — Great</option>
+                  <option value="3">★★★ — Good</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group form-group--full">
+              <label for="reviewText">Your Review *</label>
+              <textarea id="reviewText" name="reviewText" rows="4" placeholder="Tell future guests about your stay…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Review</button>
+          </form>
+          <div id="reviewSuccess" class="form-success" hidden>
+            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3>Thank You!</h3>
+            <p>Your review has been submitted and will appear after approval.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
     <!-- BOOKING -->
