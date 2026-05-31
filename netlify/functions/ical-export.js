@@ -23,9 +23,19 @@ const path = require('path');
 
 function getBlockedDates() {
   try {
-    // Read the availability.js file
-    const filePath = path.join(__dirname, '..', '..', 'data', 'availability.js');
-    const content  = fs.readFileSync(filePath, 'utf8');
+    // Read the availability.js file (included via netlify.toml included_files)
+    // Try multiple paths: included_files puts it relative to process.cwd()
+    const candidates = [
+      path.join(__dirname, 'data', 'availability.js'),
+      path.join(process.cwd(), 'data', 'availability.js'),
+      path.join(__dirname, '..', '..', 'data', 'availability.js'),
+    ];
+    const filePath = candidates.find(p => fs.existsSync(p));
+    if (!filePath) {
+      console.error('availability.js not found in:', candidates);
+      return [];
+    }
+    const content = fs.readFileSync(filePath, 'utf8');
 
     // Extract the array from the JS file
     // The file defines: const AVAILABILITY_BLOCKED_DATES = [...]
