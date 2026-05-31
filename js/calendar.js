@@ -137,7 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       if (emailJsReady) {
-        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
+        const sendPromise = emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
+        const timeout = new Promise((_, reject) =>
+          setTimeout(() => reject(new Error('Request timed out — please try again')), 15000)
+        );
+        await Promise.race([sendPromise, timeout]);
       } else {
         // Demo mode — simulate network delay (EmailJS not yet configured)
         await new Promise(r => setTimeout(r, 1200));
