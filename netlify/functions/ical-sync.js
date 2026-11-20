@@ -1,19 +1,17 @@
 // =============================================================
 //  VILLA ISLAMAR — ical-sync Netlify Function
-//  Fetches Airbnb + VRBO iCal feeds and returns blocked dates
-//  so the booking calendar stays in sync automatically.
+//  Fetches the Special Places of Costa Rica iCal feed and returns
+//  blocked dates so the booking calendar stays in sync.
 //
-//  SETUP (one-time, ~2 minutes):
-//  1. Get your iCal URLs:
-//     • Airbnb:  Listing → Availability → Sync calendars → Export Calendar
-//     • VRBO:    Calendar → Import/Export → Export Calendar
+//  SETUP (one-time):
+//  1. In Special Places of Costa Rica, find the property's calendar
+//     export/iCal URL (usually an .ics link).
 //  2. In Netlify dashboard → Site settings → Environment variables, add:
-//     • AIRBNB_ICAL_URL  =  https://www.airbnb.com/calendar/ical/XXXXX.ics?s=...
-//     • VRBO_ICAL_URL    =  https://www.vrbo.com/icalendar/XXXXX.ics?...
-//  3. Re-deploy (or just save — Netlify auto-deploys from GitHub).
+//     • SPECIAL_PLACES_ICAL_URL = https://.../calendar.ics
+//  3. Redeploy the site.
 //
-//  The calendar on book.html will then auto-block any dates booked
-//  on Airbnb or VRBO within seconds of a reservation.
+//  The calendar on the website will block dates booked through
+//  Special Places, then fall back to data/availability.js if needed.
 // =============================================================
 
 const https = require('https');
@@ -55,8 +53,7 @@ function parseIcal(text) {
 
 exports.handler = async () => {
   const urls = [
-    process.env.AIRBNB_ICAL_URL,
-    process.env.VRBO_ICAL_URL,
+    process.env.SPECIAL_PLACES_ICAL_URL,
   ].filter(u => u && u.trim());
 
   if (urls.length === 0) {

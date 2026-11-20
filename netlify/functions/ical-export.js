@@ -1,19 +1,16 @@
 // =============================================================
 //  VILLA ISLAMAR — ical-export Netlify Function
-//  Serves your direct bookings (from availability.js) as an iCal
-//  feed that Airbnb/VRBO can import to stay in sync.
+//  Serves direct booking dates from availability.js as an iCal feed.
 //
 //  SETUP:
-//  1. Deploy to Netlify (auto-deploys from GitHub push)
-//  2. Your iCal export URL will be:
+//  1. Deploy to Netlify (auto-deploys from GitHub push).
+//  2. The iCal export URL is:
 //     https://YOUR-SITE.netlify.app/.netlify/functions/ical-export
-//  3. In Airbnb: Calendar → Availability → Sync calendars →
-//     "Import a new calendar" → paste the URL above
-//  4. Airbnb will poll this URL every few hours to check for new bookings
+//  3. In your property's Special Places calendar settings, import this
+//     URL if an external calendar import feature is available.
 //
-//  When you add dates to data/availability.js and push to GitHub,
-//  this feed automatically updates, and Airbnb will pick up the
-//  blocked dates on its next sync (usually within 1-3 hours).
+//  When dates are added to data/availability.js and pushed to GitHub,
+//  this feed automatically updates for any connected property calendar.
 // =============================================================
 
 // Import the blocked dates from availability.js
