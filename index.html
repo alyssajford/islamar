@@ -164,78 +164,17 @@
         <div class="section-header" data-aos="fade-up">
           <span class="section-eyebrow">No Middleman. No Extra Fees.</span>
           <h2 class="section-title">Book Direct</h2>
-          <p class="section-intro">Select your dates and send us a request. We'll confirm availability and be in touch within 24 hours. <strong>No platform fees — book direct and save.</strong></p>
+          <p class="section-intro">Check live availability and reserve Villa Islamar through our property listing at <strong>Special Places of Costa Rica</strong>.</p>
         </div>
-        <div class="booking-layout">
-          <div class="booking-calendar-wrap" data-aos="fade-right">
-            <div id="calendar-inline"></div>
-            <div class="booking-legend">
-              <span class="legend-item"><span class="dot dot--available"></span> Available</span>
-              <span class="legend-item"><span class="dot dot--booked"></span> Unavailable</span>
-            </div>
-            <a class="booking-external-link" href="https://www.specialplacesofcostarica.com/vacation-rental/villa-catalina-11/" target="_blank" rel="noopener noreferrer">
+        <div class="booking-layout booking-layout--external">
+          <div class="booking-calendar-wrap booking-external-card" data-aos="fade-up">
+            <i class="booking-external-icon fa-solid fa-calendar-check"></i>
+            <h3>Check Availability &amp; Book</h3>
+            <p>View live dates, pricing, and reservation details on the official Special Places of Costa Rica listing.</p>
+            <a class="btn btn-primary" href="https://www.specialplacesofcostarica.com/vacation-rental/villa-catalina-11/" target="_blank" rel="noopener noreferrer">
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              <span>View &amp; book at Special Places of Costa Rica</span>
+              <span>Check Availability &amp; Book Here</span>
             </a>
-          </div>
-          <div class="booking-form-wrap" data-aos="fade-left">
-            <form id="bookingForm" novalidate>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="checkin">Check-in Date</label>
-                  <input type="text" id="checkin" name="checkin" placeholder="Select on calendar" readonly required />
-                </div>
-                <div class="form-group">
-                  <label for="checkout">Check-out Date</label>
-                  <input type="text" id="checkout" name="checkout" placeholder="Select on calendar" readonly required />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="guestName">Full Name *</label>
-                  <input type="text" id="guestName" name="guestName" placeholder="Jane Smith" autocomplete="name" required />
-                </div>
-                <div class="form-group">
-                  <label for="guests">Number of Guests *</label>
-                  <select id="guests" name="guests" required>
-                    <option value="">Select…</option>
-                    <option>1</option><option>2</option><option>3</option><option>4</option>
-                    <option>5</option><option>6</option><option>7</option><option>8</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="guestEmail">Email Address *</label>
-                  <input type="email" id="guestEmail" name="guestEmail" placeholder="jane@example.com" autocomplete="email" required />
-                </div>
-                <div class="form-group">
-                  <label for="guestPhone">Phone Number</label>
-                  <input type="tel" id="guestPhone" name="guestPhone" placeholder="+1 (555) 000-0000" autocomplete="tel" />
-                </div>
-              </div>
-              <div style="display:none" aria-hidden="true">
-                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
-              </div>
-              <div class="form-group form-group--full">
-                <label for="message">Message (optional)</label>
-                <textarea id="message" name="message" rows="4" placeholder="Tell us about your trip — special occasions, questions, or requests…"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn--full" id="submitBtn">
-                <span class="btn-text">Send Booking Request</span>
-                <span class="btn-loading" hidden><i class="fa-solid fa-spinner fa-spin"></i>&nbsp; Sending…</span>
-              </button>
-              <p class="form-privacy"><i class="fa-solid fa-lock"></i> Your information is private and never shared.</p>
-            </form>
-            <div id="formSuccess" class="form-success" hidden>
-              <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
-              <h3>Request Sent!</h3>
-              <p>Thank you! We'll review your dates and get back to you within <strong>24 hours</strong> to confirm.</p>
-              <button type="button" class="btn btn-outline" onclick="document.getElementById('formSuccess').hidden=true;document.getElementById('bookingForm').hidden=false;">Send Another Request</button>
-            </div>
-            <div id="formError" class="form-error" hidden>
-              <p><i class="fa-solid fa-triangle-exclamation"></i> Something went wrong. Please email us at <a href="mailto:laurieford10@yahoo.com">laurieford10@yahoo.com</a></p>
-            </div>
           </div>
         </div>
       </div>
